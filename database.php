@@ -5,5 +5,5 @@
  $database = 'volba';
  $conn=mysqli_connect($server,$username,$password,$database);
  if(!$conn){
-     die("conexion tipo fallida");
+     die("conexion2 tipo fallida");
 ?>
