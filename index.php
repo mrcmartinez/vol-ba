@@ -1,9 +1,10 @@
 <?php
+require_once("Config/Config.php");
 $url = !empty($_GET['url'])?$_GET['url']:'home/home';
 //separar la url con delimitador "/" en un array
 $arrUrl = explode("/",$url);
 //controlador
-$Controller = $arrUrl[0];
+$controller = $arrUrl[0];
 $method = $arrUrl[0];
 $params = "";
 if (!empty($arrUrl[1])) {
@@ -21,5 +22,14 @@ if (!empty($arrUrl[2])) {
         echo $params;
     }
 }
-echo "<br>Controlador: ".$Controller." metodo: ".$method;
+spl_autoload_register(function($class){
+    if (file_exists(LIBS.'Core/'.$class.".php")) {
+        require_once(LIBS.'Core/'.$class.".php");
+    }
+});
+
+//load
+$controllerFile = "Controllers/".$controller.".php";
+
+echo "<br>Controlador: ".$controller." metodo: ".$method;
 ?>
