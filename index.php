@@ -19,7 +19,7 @@ if (!empty($arrUrl[2])) {
             $params.= $arrUrl[$i].',';
         }       
         $params = trim($params,',');
-        echo $params;
+        // echo $params;
     }
 }
 spl_autoload_register(function($class){
@@ -30,6 +30,17 @@ spl_autoload_register(function($class){
 
 //load
 $controllerFile = "Controllers/".$controller.".php";
+if (file_exists($controllerFile)) {
+    require_once($controllerFile);
+    $controller = new $controller();
+    if (method_exists($controller,$method)) {
+        $controller->{$method}($params);
+    }else{
+        echo "no existe metodo";    
+    }
+}else{
+    echo "no existe controlador";
+}
 
-echo "<br>Controlador: ".$controller." metodo: ".$method;
+// echo "<br>Controlador: ".$controller." metodo: ".$method;
 ?>
