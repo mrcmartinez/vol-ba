@@ -7,8 +7,11 @@
     <title><?php echo $data['tag_page'];?></title>
 </head>
 <body>
+    <section id="<?php echo $data['page_id'];?>">
     <!-- <h1>Sistema de gestion de voluntaraiado para el banco de alimemtos de leon </h1> -->
-    <h1><?php echo $data['tag_title'];?></h1>
+    <h1><?php echo $data['page_title'];?></h1>
+    <h1><?php echo $data['page_content'];?></h1>
     <?php print_r($data);?>
+    </section>
 </body>
 </html>
