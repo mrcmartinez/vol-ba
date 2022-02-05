@@ -9,5 +9,23 @@
             $request_insert = $this->insert($query_insert,$arrData);
             return $request_insert;
         }
+        public function getUser($id){
+            $sql = "SELECT * FROM usuario WHERE id_usuario = $id";
+            $request = $this->select($sql);
+            return $request;
+        }
+        public function updateUser(int $id, string $nombre, string $password, string $rol){
+            $sql = "UPDATE usuario SET nombre_usuario = ?, contraseña = ?, rol = ? WHERE id_usuario = $id";
+            $arrData = array($nombre,$password,$rol);
+            $request = $this->update($sql,$arrData);
+            return $request;
+            
+        }
+        public function getUsers(){
+            $sql = "SELECT * FROM usuario";
+            $request = $this->select_all($sql);
+            return $request;
+
+        }
     }
 ?>

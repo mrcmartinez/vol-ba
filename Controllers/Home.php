@@ -15,5 +15,17 @@
             $data=$this->model->setUser("Mau","123","Admin");
             print_r($data);
         }
+        public function verusuario($id){
+            $data = $this->model->getUser($id);
+            print_r($data);
+        }
+        public function actualizar(){
+            $data = $this->model->updateUser(1,"Mauricio","123456","admin");
+            print_r($data);
+        }
+        public function verusuarios(){
+            $data = $this->model->getUsers();
+            print_r($data);
+        }
     }
 ?>
