@@ -5,7 +5,7 @@
         }
         public function home(){
             $data['page_id']=1;
-            $data['tag_page']="Home";
+            $data['page_tag']="Home";
             $data['page_title']="Pagina principal";
             $data['page_name']="home";
             $data['page_content']="AadADADSFDDSFASDadwdsdsd";
@@ -25,6 +25,10 @@
         }
         public function verusuarios(){
             $data = $this->model->getUsers();
+            print_r($data);
+        }
+        public function eliminarUsuario($id){
+            $data = $this->model->delUser($id);
             print_r($data);
         }
     }

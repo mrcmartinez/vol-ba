@@ -27,5 +27,10 @@
             return $request;
 
         }
+        public function delUser($id){
+            $sql = "DELETE FROM usuario WHERE id_usuario = $id";
+            $request = $this->delete($sql);
+            return $request;
+        }
     }
 ?>
