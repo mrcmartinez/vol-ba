@@ -19,7 +19,7 @@
                 <label for="btn-menu">☰</label>
             </div>
             <div class="logo">
-                <h1>Vol-Ba-Zor</h1>
+                <h1>Vol-Ba</h1>
             </div>
             <nav class="menu">
                 <a href="#">Voluntariado</a>
@@ -29,7 +29,7 @@
             </nav>
         </div>
     </header>
-    <!-- <div class="capa"> -->
+    <div class="capa"></div> 
         <input type="checkbox" id="btn-menu">
         <div class="container-menu">
             <div class="cont-menu">
