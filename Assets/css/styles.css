@@ -5,6 +5,14 @@
 		box-sizing: border-box;
 		font-family: 'Montserrat Alternates', sans-serif;
 	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background:white;
+		z-index: -1;
+		top: 0;left: 0;
+	}
 	/*Estilos para el encabezado*/
 	.header{
         background-color: #1c1c1c;
@@ -58,6 +66,7 @@
 	#btn-menu{
 		display: none;
 	}
+	/* aqui */
 	.container-menu{
 		position: absolute;
 		background: rgba(0,0,0,0.5);
@@ -80,6 +89,7 @@
 		position: relative;
 		transition: all 500ms ease;
 		transform: translateX(-100%);
+		z-index: 1;
 	}
 	#btn-menu:checked ~ .container-menu .cont-menu {
 		transform: translateX(0%);
@@ -112,7 +122,8 @@
 
     .container-lbl-menu {
         width: 100%;
-        max-width: 700px;
+		height: 100%;
+        max-width: 900px;
         margin: auto;
         margin-top: 200px;
     }
@@ -136,7 +147,7 @@
     .content {
         position: relative;
     }
-    
+    /* servicios-inicio */
     .content div {
         position: absolute;
         line-height: 1.8;
@@ -147,6 +158,7 @@
         padding: 30px;
         background: white;
         padding-bottom: 40px;
+		z-index: -1;
     }
     
     #radio1,
