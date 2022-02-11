@@ -4,11 +4,11 @@
             parent::__construct();
         }
         public function voluntariado(){
-            $data['page_id']=1;
             $data['page_tag']="Voluntariado";
             $data['page_title']="Pagina principal";
             $data['page_name']="voluntariado";
-             $this->views->getView($this,"voluntariado",$data);
+            $data['page_functions_js']= "functions_voluntariado.js";
+            $this->views->getView($this,"voluntariado",$data);
         }
     }
 ?>
