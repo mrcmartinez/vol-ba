@@ -10,5 +10,9 @@
             $data['page_functions_js']= "functions_voluntariado.js";
             $this->views->getView($this,"voluntariado",$data);
         }
+        public function getVoluntariado(){
+            $arrData=$this->model->selectVoluntariado();
+            dep($arrData);
+        }
     }
 ?>
