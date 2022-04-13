@@ -9,10 +9,13 @@
             $data['page_name']="voluntariado";
             $data['page_functions_js']= "functions_voluntariado.js";
             $this->views->getView($this,"voluntariado",$data);
+            
         }
         public function getVoluntariado(){
             $arrData=$this->model->selectVoluntariado();
-            dep($arrData);
+            // dep($arrData);
+            // print_r($arrData);
+            $this->views->getView($this,"voluntariado",$arrData);
         }
     }
 ?>
